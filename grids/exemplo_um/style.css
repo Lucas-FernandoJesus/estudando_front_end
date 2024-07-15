@@ -1,0 +1,44 @@
+body{
+  margin: 0;
+  height: 100vh;
+}
+
+.container{
+  display: grid;
+  /*Definição de quantas colunas iremos usar*/
+  grid-template-columns: 200px 1fr 200px; /*medidas = nmr de colunas*/
+  /*Definição de quantas linhas iremos usar*/
+  grid-template-rows: 20% 1fr 10%;/*medidas = nmr de linhas*/
+  grid-template-areas:
+  'header header header'
+  'purple goiaba goiaba'
+  'limao limao limao'
+  ;
+  /* gap: 20px; */
+}
+
+header{
+  background-color: chartreuse;
+  /*linha vitural vertical : start :*/
+  grid-column-start: 1;
+  /*linha vitural vertical : end :*/
+  grid-column-end: 4;
+
+  grid-area: header;
+}
+
+main{
+  background-color: white;
+  grid-area: goiaba;
+}
+
+aside{
+  background-color: brown;
+  grid-column: 2/4;
+  grid-area: purple;
+}
+footer{
+  background-color: red;
+  grid-column: 1/4;
+  grid-area: limao;
+}

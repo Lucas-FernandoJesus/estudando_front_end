@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+section{
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: repeat(3,100px);
+  gap: 2px; 
+  justify-content: center;
+}
+
+#div{
+  background-color: purple;
+}
